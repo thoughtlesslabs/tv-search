@@ -22,16 +22,24 @@ const searchTvShows = async (search) => {
 const addSearchResults = async (display) => {
     for ( let shows of display) {
         const newIMG = document.createElement("IMG");
-        const newLI = document.createElement("li");
+        const newDiv = document.createElement("div");
+        const newParagraph = document.createElement("p");
+
+        newDiv.classList.add("col");
+
         if ( shows.show.image ) {
             const showIMG = shows.show.image.medium;
             newIMG.src = showIMG
+            newIMG.classList.add("rounded")
         }
 
         const showName = shows.show.name;
-        newLI.innerHTML = showName;
 
-        resultsList.append(newLI);
-        resultsList.append(newIMG);
+        newParagraph.innerHTML = showName;
+        
+        newDiv.append(newParagraph);
+        newDiv.append(newIMG);
+
+        resultsList.append(newDiv);
     }
 }
