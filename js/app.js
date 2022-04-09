@@ -30,7 +30,7 @@ const addSearchResults = async (display) => {
         if ( shows.show.image ) {
             const showIMG = shows.show.image.medium;
             newIMG.src = showIMG
-            newIMG.classList.add("rounded")
+            newIMG.classList.add("rounded", "img-fluid")
         }
 
         const showName = shows.show.name;
