@@ -25,12 +25,13 @@ const addSearchResults = async (display) => {
         const newDiv = document.createElement("div");
         const newParagraph = document.createElement("p");
 
-        newDiv.classList.add("col");
+        newParagraph.classList.add("text-center")
+        newDiv.classList.add("col", "mb-3", "p-1");
 
         if ( shows.show.image ) {
             const showIMG = shows.show.image.medium;
             newIMG.src = showIMG
-            newIMG.classList.add("rounded", "img-fluid")
+            newIMG.classList.add("rounded", "img-fluid", "align-items-bottom")
         }
 
         const showName = shows.show.name;
